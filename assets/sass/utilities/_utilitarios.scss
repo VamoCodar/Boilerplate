@@ -1,0 +1,73 @@
+// ██╗   ██╗████████╗██╗██╗     ██╗████████╗ █████╗ ██████╗ ██╗ ██████╗ ███████╗
+// ██║   ██║╚══██╔══╝██║██║     ██║╚══██╔══╝██╔══██╗██╔══██╗██║██╔═══██╗██╔════╝
+// ██║   ██║   ██║   ██║██║     ██║   ██║   ███████║██████╔╝██║██║   ██║███████╗
+// ██║   ██║   ██║   ██║██║     ██║   ██║   ██╔══██║██╔══██╗██║██║   ██║╚════██║
+// ╚██████╔╝   ██║   ██║███████╗██║   ██║   ██║  ██║██║  ██║██║╚██████╔╝███████║
+//  ╚═════╝    ╚═╝   ╚═╝╚══════╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚══════╝
+
+
+@import "./scrollbars"; //scrollbar colorida
+
+
+
+@mixin center($left:auto, $right:auto) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin img_cover_absolute {
+  @include size(100%); //100% tamanho
+  @include inset; //centraliza
+
+  position: absolute;
+  object-fit: cover;
+}
+
+
+@mixin pseudo($position: initial) {
+  content: "";
+  @include bg-props-contain; //para gerar a imagem como background contain  e position center
+
+  display: block;
+  position: $position;
+  pointer-events: none;
+}
+
+//background
+@mixin bg-props-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@mixin bg-props-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+// Sizing
+// ------
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+@mixin inset {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+
+//PX TO REM
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}

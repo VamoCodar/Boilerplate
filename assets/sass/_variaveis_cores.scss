@@ -1,0 +1,19 @@
+//colocar  as variaveis de cor  do projeto no body como variaveis css
+body {
+    --cor-preto-1: #000;
+
+}
+
+body.dark__mode {
+    --cor-preto-1: white;
+
+    //reduz levemente o brilho
+    img {
+        filter: brightness(0.9);
+    }
+}
+
+//mas utilizar dentro do sass a sintaxe de variavel do sass que é menos verrrbosa
+
+// preto
+$cor-preto-1:#{var(--cor-preto-1)};

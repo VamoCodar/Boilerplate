@@ -1,0 +1,268 @@
+// ===================================================
+@import "./variaveis_cores";
+@import "./variaveis_gerais";
+
+@import "./utilities/responsivo";
+@import "./utilities/clamp";
+@import "./utilities/utilitarios";
+
+
+//exemplo de botao pra voce customizar
+@mixin Botao($cor-texto:white, $cor-background) {
+
+    //container
+    //
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: $cor-texto;
+        background: $cor-background;
+        cursor: pointer;
+        font-size: 1.25rem;
+        text-decoration: none;
+
+        //padding sempre no link  para aumentar a zona de contato
+        //icones dentro dos links para ele tbm ser clicavel
+        ion-icon {
+            margin-left: 10px;
+
+        }
+    }
+
+    //hover
+    a {
+        &:hover {}
+
+        &:hover ion-icon {}
+
+
+    }
+
+}
+
+@mixin titulos_1 {
+    display: flex;
+    width: 100%;
+
+    h2 {
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+//==================================================
+
+
+// @mixin botao_example {
+
+//     display: inline-flex;
+//     height: 50px;
+//     align-items: center;
+//     padding: 0 20px;
+//     border-radius: 4px;
+//     justify-content: space-between;
+//     color: white;
+//     border: initial;
+//     cursor: pointer;
+//     background: linear-gradient(89.76deg, #DCBE6D -62.77%, #B68D25 99.8%);
+//     box-shadow: 0px 6px 12px rgba(185, 144, 41, 0.15);
+//     border-radius: 4px;
+//     min-width: 170px;
+//     margin: initial;
+//     transition: .3s ease;
+
+//     &:hover {
+//         box-shadow: 10px 10px 24px rgba(185, 144, 41, 0.25);
+//         transform: translateY(-2px) scale(1.04);
+//     }
+// }
+
+
+// 🖤  swiper
+// @mixin botoes_swiper($bg-direito,) {
+
+//     .swiper-button-next,
+//     .swiper-button-prev {
+//         background: linear-gradient(89.76deg, #DCBE6D -62.77%, #B68D25 99.8%);
+//         box-shadow: 0px 8px 16px 2px rgba(185, 144, 41, 0.1), 0px 16px 32px 2px rgba(185, 144, 41, 0.1);
+//         border-radius: 4px;
+//         height: 30px;
+//         width: 30px;
+
+//         &:after {
+//             content: ""; //remove o botao padrao
+//         }
+
+//         &.swiper-button-disabled {
+//             opacity: 0 !important; //da opacidade 0 quando o botao n ta ativo
+//         }
+
+//         @include d(m) { //remove os botoes no mobile e tablet
+//             display: none;
+//         }
+//     }
+
+//     .swiper-button-next {
+//         &:before {
+//             @include pseudo(absolute); //ja pego o mixin pseudo
+//             background-image: ($bg-direito);
+//             display: grid;
+//             place-items: center;
+//             @include size(40%); 
+//             @include inset;
+//             margin: auto;
+//             position: relative;
+//             left: 1px;
+//         }
+//     }
+
+//     .swiper-button-prev {
+//         &:before {
+//             @include pseudo(absolute);
+//             background-image: url($bg-esquerdo;
+//             display: grid;
+//             place-items: center;
+//             @include size(40%);
+//             @include inset;
+//             margin: auto;
+
+//         }
+//     }
+// }
+
+
+// 🤎
+// @mixin bullet_swiper($bg) {
+
+//     .swiper-pagination-bullet {
+//         background: $($bg);
+//         transition: .150s ease-out;
+
+//         transition-property: width,
+//             border-radius,
+//             scale,
+//             opacity;
+//         transform-origin: left right;
+
+
+//         &-active {
+//             width: 20px !important;
+//             border-radius: 10px !important;
+
+//         }
+//     }
+// }
+
+
+
+
+//texto 
+
+// @mixin gradiente_no_texto {
+//     background: $gradiente-1;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+// @mixin titulo_das_subpaginas {
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     h2 {
+//         font-family: $font-1;
+//         font-weight: 700;
+//         font-size: 1.4rem;
+//         color: $cor-marrom;
+//         display: inline-block;
+//         @include center;
+//         margin-bottom: 10px;
+//         letter-spacing: 1px;
+//     }
+
+//     h1 {
+//         font-family: $font-1;
+//         font-weight: 300;
+//         font-size: 2.4rem;
+//         margin-bottom: 0;
+//         padding-bottom: 0;
+//         position: relative;
+//         color: $cor-preto-1;
+
+//         @include d(s) {
+//             font-size: 2rem;
+//         }
+
+//     }
+
+//     h3 {
+//         font-family: $font-1;
+//         font-weight: 600;
+//         font-size: 2rem;
+//         margin-top: 10px;
+//         color: $cor-preto-1;
+
+//         font-weight: 300;
+
+//         @include d(s) {
+//             font-size: 1.5rem;
+
+//         }
+
+//     }
+
+
+// }
+
+
+
+// @mixin card_example() {
+
+//     border-radius: 16px;
+//     border: 1px solid rgba(0, 0, 0, 0.05);
+//     background: white;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     max-width: 320px;
+//     min-width: 320px;
+//     padding: 1.25rem;
+//     min-height: 400px;
+
+//     @include d(m) {
+//         max-width: 20rem;
+//         min-width: 20rem;
+//     }
+
+//     img {
+//         margin-top: 60px;
+//         @include size(100px);
+//         object-fit: contain;
+//     }
+
+//     h2 {
+//         color: $cor-preto-1;
+//         font-size: 1.5rem;
+//         margin-top: 1.25rem;
+//         margin-bottom: 1.25rem;
+//         font-weight: 700;
+//         text-align: center;
+//         @include center;
+//         display: inline-block;
+//     }
+
+//     p {
+//         font-weight: 300;
+//         text-align: center;
+//         @include center;
+//         display: inline-block;
+//         font-size: 1rem;
+//         margin-top: 10px;
+//     }
+// }

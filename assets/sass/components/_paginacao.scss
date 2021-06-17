@@ -1,0 +1,55 @@
+@mixin paginacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.ativo {
+                background: $cor-laranja !important;
+                color: white !important;
+            }
+            &.inativo{
+                opacity: .3;
+            }
+
+        }
+
+        li:not(.seta) {
+            padding: 5px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.05);
+            margin: 0 10px;
+            height: 35px;
+            width: 35px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-weight: 500;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        li.seta {
+            height: 35px;
+            width: 35px;
+            margin: 0 15px;
+
+            &:hover {
+                img {
+                    filter: brightness(1.2)
+                }
+            }
+
+        }
+    }
+
+}

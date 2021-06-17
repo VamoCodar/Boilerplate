@@ -1,0 +1,40 @@
+body {
+    // @include scrollbars(8px, $cor-1, rgb(238, 238, 238));
+    // font-feature-settings: 'pnum'on, 'lnum'on;
+    // transition: opacity 0.3s ease;
+    // letter-spacing: 0.3px;
+    // line-height: 140%;
+    // background: #fff;
+    font-size: 1rem;
+    overflow-x: hidden;
+    font-family: $font-1;
+
+    opacity: 0;
+
+    &.dcl {
+        opacity: 1;
+    }
+
+}
+
+
+//rem responsivo
+html {
+    overflow-x: hidden;
+
+    --font-base: 100%;
+    font-size: var(--font-base);
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: calc(var(--font-base) - 9.25%);
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        font-size: calc(var(--font-base) - 12.5%);
+    }
+}
+

@@ -1,0 +1,150 @@
+@import "../mixins";
+
+
+// @mixin secao_contato_example ($ornamento:false) {
+//     &__wrapper {
+//         display: flex;
+//         justify-content: center;
+
+//         @include d(m) {
+//             flex-direction: column-reverse;
+//             max-width: 500px;
+//             @include center;
+//         }
+//     }
+
+//     &__titulo {
+//         max-width: 875px;
+//         margin: 0 auto;
+
+//         @include d(m) {
+//             display: flex;
+//             justify-content: center;
+
+//             @include d(m) {
+//                 justify-content: initial;
+//             }
+//         }
+
+//         h1 {
+//             margin-bottom: 3.125rem;
+//             display: inline-block;
+//             font-size: 2.5rem;
+//             font-weight: 300;
+//             position: relative;
+//             color: $cor-preto-1;
+
+
+//             @include d(s) {
+//                 margin-bottom: 2rem;
+//                 display: inline-block;
+//                 font-size: 1.75rem;
+//                 font-weight: 300;
+//             }
+
+//             span {
+//                 font-weight: 600;
+//                 color: $cor-marrom;
+//             }
+
+//             @if $ornamento==true {
+//                 &:after {
+//                     @include pseudo(absolute);
+
+//                     @include size(70px);
+//                     background: $cor-marrom-claro;
+//                     left: -30px;
+//                     border-radius: 50%;
+//                     top: -20px;
+//                     z-index: -1;
+
+//                     @include d(s) {
+//                         @include size(40px);
+//                         left: -10px;
+//                         top: -10px;
+
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     &__form {
+//         @include d(m) {
+//             order: 10;
+//         }
+//     }
+
+//     &__texto {
+//         padding-left: 50px;
+
+//         @include d(m) {
+//             padding-left: 0;
+//             order: 1;
+//             padding-top: 30px;
+//         }
+
+//         ul {
+//             margin-bottom: 30px;
+
+//             li {
+//                 h2 {
+//                     font-weight: 500;
+//                     font-size: 16px;
+//                     line-height: 140%;
+//                 }
+
+//                 a {
+//                     margin-top: 8px;
+//                     display: inline-flex;
+//                     align-items: center;
+//                     font-weight: 300;
+//                     font-size: 16px;
+//                     line-height: 140%;
+//                     color: $cor-preto-1;
+
+//                     &:hover {
+//                         text-decoration: underline;
+//                     }
+
+//                     img {
+//                         @include size(20px);
+//                         margin-right: 10px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .input__wrapper {
+//         display: grid;
+//         width: var(--tamanho-geral);
+//         grid-template-columns: 1fr 1fr;
+//         gap: 15px;
+
+//         >.input__box {
+//             width: 100%;
+//         }
+//     }
+
+//     textarea {
+//         font-family: $font-1;
+//     }
+
+//     textarea,
+//     input {
+//         border-radius: 4px;
+//     }
+
+//     .btn__container {
+//         max-width: var(--tamanho-geral);
+//         width: 100%;
+//         display: flex;
+//         justify-content: flex-end;
+//         margin-top: 10px;
+
+//         .submit {
+//             @include botaoRoad2;
+//         }
+//     }
+// }

@@ -1,0 +1,185 @@
+$cor-1:rgba(33, 33, 33, 0.3);
+$cor-2:#b99029;
+$cor-4:rgba(33, 33, 33, 0.6);
+
+
+
+form {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    background: white;
+
+
+
+}
+
+
+
+
+
+
+.input__box {
+    position: relative;
+    width: var(--tamanho-geral);
+    height: 46px;
+    margin-bottom: 20px;
+
+
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid rgba(33, 33, 33, 0.3);
+        border-radius: 3px;
+        background: transparent;
+        padding: 13px;
+        outline: none;
+        color: $cor-preto-1;
+        font-weight: 400;
+        font-size: 16px;
+        transition: .5s ease;
+        padding-left: 15px;
+    }
+
+    span {
+        position: absolute;
+        top: 9px;
+        left: 15px;
+        padding: 3px 1px;
+
+        display: inline-block;
+        color: $cor-4;
+        font-weight: 300;
+        font-size: 15px;
+
+        pointer-events: none;
+        font-size: 1rem;
+        transition:
+            font-size .3s ease-in-out,
+            transform .3s ease-in-out,
+            background .2s ease-in-out,
+            color .2s ease-in-out;
+        pointer-events: none;
+
+        &:after {
+            content: "";
+            transition: .1s ease-out;
+        }
+    }
+
+    input:focus~span,
+    input:valid~span {
+        transform: translateY(-21px) translateX(-8px);
+        font-size: 12px;
+        color: $cor-preto-1 !important;
+
+        &:after {
+            @include pseudo(absolute);
+            @include inset;
+            margin: auto;
+            height: 3px;
+            bottom: -1px;
+            width: 100%;
+            background: white;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+
+    }
+
+    input:focus~ion-icon,
+    input:valid~ion-icon {
+        color: $cor-2;
+
+    }
+
+
+
+    input:focus,
+    input:valid,
+    textarea:focus,
+    textarea:valid {
+        border: 1px solid $cor-2 !important;
+
+
+
+    }
+
+    ion-icon {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        margin: auto 0;
+        left: 10px;
+        font-size: 20px;
+        color: $cor-4;
+    }
+}
+
+/* .ultimo {
+    margin-bottom: 10px;
+} */
+
+textarea {
+    margin: 0px;
+    width: var(--tamanho-geral);
+    height: 217px;
+    max-width: var(--tamanho-geral);
+    min-width: var(--tamanho-geral);
+    height: 180px;
+    border: 1px solid rgba(33, 33, 33, 0.3);
+    resize: none;
+    padding: 15px 15px;
+    transition: 0.3s;
+
+    &:valid {
+        border: 1px solid $cor-2 !important;
+
+    }
+
+
+}
+
+
+textarea:focus {
+    border-color: $cor-1 !important;
+
+}
+
+
+
+.submit {
+
+    border: 1px solid $cor-1;
+    padding: 10px 45px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    transition: background .3s ease-in-out;
+    display: inline-block;
+    margin: 10px auto;
+    cursor: pointer;
+
+    @include d(m) {
+        flex: 1 1 auto;
+        width: 100% !important;
+        max-width: 390px;
+    }
+
+    &:hover {
+        background: $cor-2;
+        color: white;
+        border: 1px solid rgba(0, 0, 0, .3);
+    }
+
+
+
+}
